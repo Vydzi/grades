@@ -1,0 +1,16 @@
+<Window x:Class="wpf_grades.zadaniZnamky"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_grades"
+        mc:Ignorable="d"
+        Title="zadaniZnamky" Height="300" Width="200">
+    <Grid OpacityMask="#FF080808" Background="#FFF9D52C">
+        <Label  x:Name = "label_jmeno"  Content="Jméno" HorizontalAlignment="Center" Margin="0,48,0,0" VerticalAlignment="Top" Height="47" Width="124" RenderTransformOrigin="0.449,0.416" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold"/>
+        <Label  x:Name = "label_predmet" Content="Předmět" HorizontalAlignment="Center" Margin="0,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,-1.341"/>
+        <Slider x:Name ="slider_slide" HorizontalAlignment="Left" Margin="42,142,0,0" VerticalAlignment="Top" Width="120" Maximum="5" SmallChange="1" Foreground="Black"/>
+        <Button x:Name ="button_show" Content="Uložit" HorizontalAlignment="Center"  Margin="0,206,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.253,0.655" Height="43" Width="148" Click="button_ulozit_Click"  Foreground="#FFFFF7F7" FontWeight="Bold" FontSize="16" Background="Black"/>
+
+    </Grid>
+</Window>
