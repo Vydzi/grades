@@ -1,0 +1,50 @@
+<Window x:Class="wpf_grades.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_grades"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="gridgrades" Margin="0,0,0,-6" RenderTransformOrigin="0.498,0.496">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="293*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="383*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btn_show" Content="Koblížek" Grid.Row="1" Click="btn_show_Click" FontWeight="Bold" FontSize="20" Background="#FF0E0D0D" Foreground="White"/>
+        <ListBox x:Name="seznam_zaku" SelectionChanged="seznam_zaku_SelectionChanged" Background="#FF252323"/>
+        <Grid Grid.Column="1" Grid.Row="1" Background="#FF252323">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="586*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button 
+                      Content="IT1A" 
+                      HorizontalAlignment="Left" 
+                      Grid.Row="0" Click="Button_Click" Background="#FF0E0D0D" BorderBrush="#FF707070" Foreground="White" Width="28"/>
+            <Button Content="IT1B" Grid.Row="1" HorizontalAlignment="Left" Click="Button_Click_1" Background="#FF0E0D0D" Foreground="White" Width="28"/>
+        </Grid>
+        <ComboBox x:Name="combo_predmety" Grid.Column="1" Margin="0,27,0,0" Grid.Row="1" Width="120" HorizontalAlignment="Right" BorderBrush="Black">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+
+        <ListBox Grid.Column="1" x:Name="grades" SelectionChanged="grades_SelectionChanged" Background="#FF908F8F"/>
+
+
+
+    </Grid>
+</Window>
